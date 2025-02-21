@@ -1,17 +1,17 @@
 import requests
-import os
-from dotenv import load_dotenv
+# import os
+# from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 # Load environment variables
-load_dotenv()
-HUGGINGFACE_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+# load_dotenv()
+# HUGGINGFACE_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 # Hugging Face API configuration
 API_URL = "https://api-inference.huggingface.co/models/nlptown/bert-base-multilingual-uncased-sentiment"
-HEADERS = {"Authorization": f"Bearer {HUGGINGFACE_API_TOKEN}"}
+HEADERS = {"Authorization": "Bearer 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"}
 
 # FastAPI app initialization
 app = FastAPI()
